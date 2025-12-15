@@ -1,0 +1,7 @@
+#section-01 {
+  background-color: gray;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}

@@ -1,0 +1,37 @@
+/* MOBILE FIRST: media screen min width */
+
+/* Mobile */
+#pwd {
+  color: greenyellow;
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  #pwd {
+    color: red;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  #pwd {
+    color: bisque;
+  }
+}
+
+/* DESKTOP FIRST: media screen max width */
+
+/* Desktop */
+/* >769px */
+
+/* Tablet */
+/* 482px - 769px */
+@media(max-width: 769px){
+
+}
+
+/* Mobile */
+/* 1px - 481px */
+@media(max-width: 481px){
+
+}
