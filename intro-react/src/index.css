@@ -1,13 +1,1 @@
-.h1-global {
-  font-size: 32px;
-  font-weight: 700;
-  color: gray;
-}
-
-h1 {
-  color: red;
-}
-
-.button {
-  color: black;
-}
+@import 'tailwindcss';
