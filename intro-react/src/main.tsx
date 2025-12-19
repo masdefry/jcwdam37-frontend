@@ -7,6 +7,9 @@ import ProgramListPage from './pages/programs-list/page.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import TailwindCssPage from './pages/tailwind-css/page.tsx';
 import Root from './components/Root.tsx';
+import StatePage from './pages/react-hooks/use-state/page.tsx';
+import RefPage from './pages/react-hooks/use-ref/page.tsx';
+import EffectPage from './pages/react-hooks/use-effect/page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
       { path: 'program-list', element: <ProgramListPage /> },
       { path: 'register', element: <RegisterPage /> },
       { path: 'tailwind-css', element: <TailwindCssPage /> },
+      {
+        path: 'react-hooks/use-state',
+        element: <StatePage />,
+      },
+      {
+        path: 'react-hooks/use-ref',
+        element: <RefPage />,
+      },
+      {
+        path: 'react-hooks/use-effect',
+        element: <EffectPage />,
+      },
     ],
   },
 ]);
