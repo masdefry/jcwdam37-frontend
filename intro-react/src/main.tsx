@@ -10,6 +10,8 @@ import Root from './components/Root.tsx';
 import StatePage from './pages/react-hooks/use-state/page.tsx';
 import RefPage from './pages/react-hooks/use-ref/page.tsx';
 import EffectPage from './pages/react-hooks/use-effect/page.tsx';
+import BrowserStoragePage from './pages/browser-storage/page.tsx';
+import GlobalStatePage from './pages/global-state/page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: 'react-hooks/use-effect',
         element: <EffectPage />,
+      },
+      {
+        path: 'browser-storage',
+        element: <BrowserStoragePage />,
+      },
+      {
+        path: 'global-state',
+        element: <GlobalStatePage />,
       },
     ],
   },

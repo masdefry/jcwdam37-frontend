@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import ProgramCard from '../../components/ProgramCard';
 
 export default function ProgramListPage() {
+  const [programs, setPrograms] = useState([]);
+
   return (
     <>
       <h1>Pilihan Program Purwadhika</h1>
