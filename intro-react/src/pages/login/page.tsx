@@ -1,8 +1,9 @@
 import { useFormik } from 'formik';
 import { loginSchema } from '../../features/login/schemas/loginSchema';
 import Backendless from '../../lib/backendless';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useAuthStore } from '../../stores/useAuthStore';
+import { useNavigate } from 'react-router-dom';
 
 type User = {
   username: string;
@@ -11,6 +12,7 @@ type User = {
 
 export default function LoginPage() {
   const { setEmail } = useAuthStore();
+  const navigate = useNavigate();
 
   const onLogin = async ({ username, password }: User) => {
     try {
@@ -30,6 +32,7 @@ export default function LoginPage() {
       );
       setEmail(findUser[0].username);
       toast.success('Login account successfull');
+      navigate('/');
     } catch (error) {
       console.log(error);
     }
@@ -48,7 +51,6 @@ export default function LoginPage() {
 
   return (
     <>
-      <ToastContainer />
       <form onSubmit={formik?.handleSubmit}>
         <fieldset className='fieldset'>
           <legend className='fieldset-legend'>Username</legend>
