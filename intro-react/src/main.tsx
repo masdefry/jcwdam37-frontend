@@ -13,6 +13,7 @@ import EffectPage from './pages/react-hooks/use-effect/page.tsx';
 import BrowserStoragePage from './pages/browser-storage/page.tsx';
 import GlobalStatePage from './pages/global-state/page.tsx';
 import ProductPage from './pages/products/page.tsx';
+import LoginPage from './pages/login/page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <ProductPage />,
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
       },
     ],
   },
